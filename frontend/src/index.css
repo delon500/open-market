@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+:root {
+    font-family: "Hanken Grotesk", system-ui, sans-serif;
+    color: #121c2a;
+    background-color: #f8f9ff
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    background: #f8f9ff;
+}
