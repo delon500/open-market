@@ -1,6 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import HomePage from "../pages/public/HomePage";
 import LoginPage from "../pages/auth/LoginPage";
+import RegisterPage from "../pages/auth/RegisterPage";
+import RegisterBuyerPage from "../pages/auth/RegisterBuyerPage.jsx";
 
 function PlaceholderPage({ title }) {
     return (
@@ -22,14 +24,16 @@ export default function AppRoutes() {
             <Route path="/shop" element={<PlaceholderPage title="Shop" />} />
             <Route path="/cart" element={<PlaceholderPage title="Cart" />} />
             <Route path="/account-type" element={<PlaceholderPage title="Account Type Selection" />} />
-            <Route path="/register" element={<PlaceholderPage title="Register" />} />
-            <Route path="/register-buyer" element={<PlaceholderPage title="Register as Buyer" />} />
+            <Route path="/register" element={<RegisterPage />} />
+            <Route path="/register-buyer" element={<RegisterBuyerPage/>} />
             <Route path="/register-seller" element={<PlaceholderPage title="Register as Seller" />} />
             <Route path="/forgot-password" element={<PlaceholderPage title="Forgot Password" />} />
             <Route path="/reset-password" element={<PlaceholderPage title="Reset Password" />} />
             <Route path="/email-verification" element={<PlaceholderPage title="Email Verification" />} />
             <Route path="/phone-verification" element={<PlaceholderPage title="Phone Verification" />} />
             <Route path="/account-suspended" element={<PlaceholderPage title="Account Suspended" />} />
+            <Route path="/buyer-dashboard" element={<PlaceholderPage title="Buyer Dashboard" />} />
+            <Route path="/seller-dashboard" element={<PlaceholderPage title="Seller Dashboard" />} />
 
             <Route path="*" element={<PlaceholderPage title="Page Not Found" />} />
         </Routes>
