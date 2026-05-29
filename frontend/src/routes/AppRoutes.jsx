@@ -3,6 +3,7 @@ import HomePage from "../pages/public/HomePage";
 import LoginPage from "../pages/auth/LoginPage";
 import RegisterPage from "../pages/auth/RegisterPage";
 import RegisterBuyerPage from "../pages/auth/RegisterBuyerPage.jsx";
+import RegisterSellerPage from "../pages/auth/RegisterSellerPage.jsx";
 
 function PlaceholderPage({ title }) {
     return (
@@ -26,7 +27,7 @@ export default function AppRoutes() {
             <Route path="/account-type" element={<PlaceholderPage title="Account Type Selection" />} />
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/register-buyer" element={<RegisterBuyerPage/>} />
-            <Route path="/register-seller" element={<PlaceholderPage title="Register as Seller" />} />
+            <Route path="/register-seller" element={<RegisterSellerPage />} />
             <Route path="/forgot-password" element={<PlaceholderPage title="Forgot Password" />} />
             <Route path="/reset-password" element={<PlaceholderPage title="Reset Password" />} />
             <Route path="/email-verification" element={<PlaceholderPage title="Email Verification" />} />
