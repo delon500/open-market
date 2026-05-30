@@ -8,6 +8,7 @@ import ForgotPasswordPage from "../pages/auth/ForgotPasswordPage.jsx";
 import ResetPasswordPage from "../pages/auth/ResetPasswordPage.jsx";
 import EmailVerificationPage from "../pages/auth/EmailVerificationPage.jsx";
 import PhoneVerificationPage from "../pages/auth/PhoneVerificationPage.jsx";
+import AccountSuspendedPage from "../pages/auth/AccountSuspendedPage.jsx";
 
 function PlaceholderPage({ title }) {
     return (
@@ -36,7 +37,7 @@ export default function AppRoutes() {
             <Route path="/reset-password" element={<ResetPasswordPage />} />
             <Route path="/email-verification" element={<EmailVerificationPage />} />
             <Route path="/phone-verification" element={<PhoneVerificationPage />} />
-            <Route path="/account-suspended" element={<PlaceholderPage title="Account Suspended" />} />
+            <Route path="/account-suspended" element={<AccountSuspendedPage />} />
             <Route path="/buyer-dashboard" element={<PlaceholderPage title="Buyer Dashboard" />} />
             <Route path="/seller-dashboard" element={<PlaceholderPage title="Seller Dashboard" />} />
 
