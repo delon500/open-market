@@ -4,6 +4,8 @@ import LoginPage from "../pages/auth/LoginPage";
 import RegisterPage from "../pages/auth/RegisterPage";
 import RegisterBuyerPage from "../pages/auth/RegisterBuyerPage.jsx";
 import RegisterSellerPage from "../pages/auth/RegisterSellerPage.jsx";
+import ForgotPasswordPage from "../pages/auth/ForgotPasswordPage.jsx";
+import ResetPasswordPage from "../pages/auth/ResetPasswordPage.jsx";
 
 function PlaceholderPage({ title }) {
     return (
@@ -28,8 +30,8 @@ export default function AppRoutes() {
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/register-buyer" element={<RegisterBuyerPage/>} />
             <Route path="/register-seller" element={<RegisterSellerPage />} />
-            <Route path="/forgot-password" element={<PlaceholderPage title="Forgot Password" />} />
-            <Route path="/reset-password" element={<PlaceholderPage title="Reset Password" />} />
+            <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+            <Route path="/reset-password" element={<ResetPasswordPage />} />
             <Route path="/email-verification" element={<PlaceholderPage title="Email Verification" />} />
             <Route path="/phone-verification" element={<PlaceholderPage title="Phone Verification" />} />
             <Route path="/account-suspended" element={<PlaceholderPage title="Account Suspended" />} />
