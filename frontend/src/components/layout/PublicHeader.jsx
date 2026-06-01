@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 
 const navLinks = [
     { label: "Shop", to: "/shop" },
-    { label: "Become a Seller", to: "/become-seller" },
+    { label: "Stores", to: "/stores" },
     { label: "Categories", to: "/#categories" },
-    { label: "How It Works", to: "/how-it-works" },
+    { label: "How it works", to: "/how-it-works" },
+    { label: "Become a seller", to: "/become-seller" },
     { label: "Help", to: "/help-centre" },
 ];
 
@@ -55,7 +56,7 @@ export default function PublicHeader() {
                             Sign In
                         </Link>
                         <Link
-                            to="/account-type"
+                            to="/register"
                             className="rounded-xl bg-[#003527] px-4 py-2 text-sm font-semibold text-white transition hover:opacity-90"
                         >
                             Join Now

@@ -2,24 +2,26 @@
 
 Open Market is a South African multi-vendor marketplace platform that connects local buyers with local sellers through a secure, trust-focused shopping experience.
 
-The platform is designed around buyer protection, seller verification, protected payments, delivery confirmation, disputes, refunds, reviews, notifications, messaging, and account security.
+The platform is being built around buyer protection, seller verification, protected payments, delivery confirmation, disputes, refunds, reviews, notifications, messaging, and account support.
 
 ## Project Vision
 
 Open Market aims to make local online commerce easier, safer, and more accessible for South African buyers and entrepreneurs.
 
-Buyers should be able to shop confidently, track orders, confirm delivery, open disputes, receive refund updates, and review sellers. Sellers should be able to create a store profile, list products, manage orders, handle delivery updates, respond to disputes, build reputation, and receive eligible payouts after delivery confirmation.
+Buyers should be able to browse local products, save items, place orders, track deliveries, confirm receipt, open disputes, receive refund updates, and review sellers.
+
+Sellers should be able to create a store profile, list products, manage orders, communicate with buyers, handle delivery updates, respond to disputes, build reputation, and receive eligible payouts after delivery confirmation.
 
 ## Core Principles
 
 * Buyer and seller trust comes first.
 * Payments are protected until delivery is confirmed.
 * Public pages should feel calm, clear, and secure.
-* Buyer registration and seller registration are separate flows.
+* Buyer registration and seller registration use separate flows.
 * Admin access should not appear on public-facing pages.
 * The design should feel modern, local, professional, and easy to use.
 
-## Recommended Tech Stack
+## Tech Stack
 
 ### Frontend
 
@@ -30,6 +32,19 @@ Buyers should be able to shop confidently, track orders, confirm delivery, open 
 * React Router
 * Axios
 * Material Symbols icons
+* Google SVG icon asset for social login
+
+Current frontend dependencies include:
+
+```txt
+@tailwindcss/vite
+axios
+lucide-react
+react
+react-dom
+react-router-dom
+tailwindcss
+```
 
 ### Backend
 
@@ -39,7 +54,23 @@ Buyers should be able to shop confidently, track orders, confirm delivery, open 
 * Prisma
 * PostgreSQL
 * Zod
-* JWT authentication
+* JWT authentication planned
+* Cookie-based auth support planned
+
+Current backend dependencies include:
+
+```txt
+@prisma/client
+bcryptjs
+cookie-parser
+cors
+dotenv
+express
+helmet
+jsonwebtoken
+morgan
+zod
+```
 
 ### Database
 
@@ -53,133 +84,163 @@ Buyers should be able to shop confidently, track orders, confirm delivery, open 
 open-market/
 ├─ README.md
 ├─ DESIGN.md
+├─ AGENT.md
 ├─ .gitignore
 ├─ .env.example
 │
 ├─ docs/
+│  ├─ api/
+│  │  └─ api-routes.md
 │  ├─ database/
-│  │  ├─ open-market.dbml
-│  │  └─ schema-notes.md
-│  ├─ product/
-│  │  ├─ pages-checklist.md
-│  │  └─ user-flows.md
-│  └─ api/
-│     └─ api-routes.md
+│  │  └─ open-market.dbml
+│  └─ product/
+│     ├─ pages-checklist.md
+│     └─ user-flows.md
 │
 ├─ frontend/
 │  ├─ package.json
+│  ├─ package-lock.json
 │  ├─ vite.config.js
 │  ├─ index.html
 │  ├─ public/
 │  └─ src/
-│     ├─ main.jsx
-│     ├─ App.jsx
-│     ├─ routes/
-│     ├─ layouts/
-│     ├─ pages/
+│     ├─ assets/
+│     │  └─ icons/
+│     │     └─ google.svg
 │     ├─ components/
-│     ├─ services/
-│     ├─ hooks/
+│     │  ├─ auth/
+│     │  ├─ common/
+│     │  ├─ layout/
+│     │  ├─ order/
+│     │  ├─ payment/
+│     │  └─ store/
 │     ├─ context/
 │     ├─ data/
+│     ├─ hooks/
+│     ├─ layouts/
+│     ├─ pages/
+│     │  ├─ auth/
+│     │  ├─ buyer/
+│     │  ├─ public/
+│     │  └─ seller/
+│     ├─ routes/
+│     ├─ services/
 │     ├─ styles/
-│     └─ utils/
+│     ├─ utils/
+│     ├─ App.jsx
+│     ├─ index.css
+│     └─ main.jsx
 │
 └─ backend/
    ├─ package.json
+   ├─ package-lock.json
    ├─ tsconfig.json
-   ├─ .env.example
+   ├─ prisma.config.ts
    ├─ prisma/
-   │  ├─ schema.prisma
-   │  ├─ seed.ts
-   │  └─ migrations/
+   │  └─ schema.prisma
    └─ src/
-      ├─ server.ts
       ├─ app.ts
+      ├─ server.ts
       ├─ config/
       ├─ common/
       ├─ modules/
       └─ routes/
 ```
 
-## Frontend Structure
+## Important Project Documents
 
-The frontend is organized around reusable layouts, pages, and components.
+```txt
+README.md                         Project overview and setup guide
+DESIGN.md                         Visual design system and UI rules
+AGENT.md                          Instructions for coding agents
+.env.example                      Shared environment variable template
+docs/api/api-routes.md            API planning notes
+docs/database/open-market.dbml    Database planning schema
+docs/product/pages-checklist.md   Product page checklist
+docs/product/user-flows.md        Product/user-flow notes
+```
+
+## Frontend Structure
 
 ```txt
 frontend/src/
-├─ routes/
+├─ assets/
+│  └─ icons/
+│     └─ google.svg
+├─ components/
+│  ├─ auth/
+│  │  ├─ ConsentCheckbox.jsx
+│  │  ├─ PasswordField.jsx
+│  │  ├─ PasswordInput.jsx
+│  │  ├─ PasswordStrengthMeter.jsx
+│  │  └─ SocialButton.jsx
+│  ├─ common/
+│  │  └─ FormInput.jsx
+│  ├─ layout/
+│  │  ├─ AnnouncementBar.jsx
+│  │  ├─ MinimalAuthHeader.jsx
+│  │  ├─ MobileBottomNav.jsx
+│  │  ├─ PublicFooter.jsx
+│  │  └─ PublicHeader.jsx
+│  ├─ order/
+│  ├─ payment/
+│  └─ store/
 ├─ layouts/
+│  ├─ AuthLayout.jsx
+│  └─ PublicLayout.jsx
 ├─ pages/
-│  ├─ public/
 │  ├─ auth/
 │  ├─ buyer/
+│  ├─ public/
 │  └─ seller/
-├─ components/
-│  ├─ common/
-│  ├─ layout/
-│  ├─ auth/
-│  ├─ product/
-│  ├─ order/
-│  └─ payment/
+├─ routes/
+│  └─ AppRoutes.jsx
 ├─ services/
-├─ hooks/
-├─ context/
-├─ data/
 ├─ styles/
-└─ utils/
+├─ utils/
+├─ App.jsx
+├─ index.css
+└─ main.jsx
 ```
-
-Important shared layout components:
-
-```txt
-components/layout/
-├─ AnnouncementBar.jsx
-├─ PublicHeader.jsx
-├─ PublicFooter.jsx
-├─ MobileBottomNav.jsx
-├─ BuyerSidebar.jsx
-└─ SellerSidebar.jsx
-```
-
-These components should be reused across pages to prevent inconsistent headers, footers, and mobile navigation.
 
 ## Backend Structure
 
-The backend uses a module-based Express structure.
-
 ```txt
 backend/src/
-├─ server.ts
 ├─ app.ts
+├─ server.ts
 ├─ config/
+│  └─ env.ts
 ├─ common/
 │  ├─ errors/
+│  │  ├─ ApiError.ts
+│  │  └─ errorHandler.ts
 │  ├─ middleware/
-│  ├─ utils/
-│  └─ types/
+│  ├─ types/
+│  └─ utils/
 ├─ modules/
 │  ├─ auth/
-│  ├─ users/
 │  ├─ buyers/
-│  ├─ sellers/
-│  ├─ products/
-│  ├─ categories/
 │  ├─ carts/
-│  ├─ orders/
-│  ├─ payments/
+│  ├─ categories/
 │  ├─ deliveries/
 │  ├─ disputes/
-│  ├─ refunds/
-│  ├─ reviews/
 │  ├─ messages/
 │  ├─ notifications/
+│  ├─ orders/
+│  ├─ payments/
 │  ├─ payouts/
-│  └─ support/
+│  ├─ products/
+│  ├─ refunds/
+│  ├─ reviews/
+│  ├─ sellers/
+│  ├─ support/
+│  └─ users/
 └─ routes/
+   └─ index.ts
 ```
 
-Each backend module should generally contain:
+Backend modules are currently scaffolded. Each module should generally use this structure when implementation begins:
 
 ```txt
 module-name.routes.ts
@@ -189,12 +250,185 @@ module-name.validation.ts
 module-name.types.ts
 ```
 
-## Main Application Areas
+## Current Implemented Frontend Pages
+
+### Authentication and Account Access
+
+```txt
+/login
+/register
+/register-buyer
+/register-seller
+/forgot-password
+/reset-password
+/email-verification
+/phone-verification
+/account-suspended
+```
+
+These files live in:
+
+```txt
+frontend/src/pages/auth/
+```
+
+### Public Marketplace Pages
+
+```txt
+/
+/shop
+```
+
+These files live in:
+
+```txt
+frontend/src/pages/public/
+```
+
+## Important Frontend Layout Rules
+
+### Public marketplace pages
+
+Use `PublicLayout` for public browsing pages:
+
+```jsx
+<PublicLayout>
+  {/* page content */}
+</PublicLayout>
+```
+
+`PublicLayout` includes:
+
+* `AnnouncementBar`
+* `PublicHeader`
+* page content
+* `PublicFooter`
+* `MobileBottomNav`
+
+Use it for pages such as:
+
+```txt
+/
+/shop
+/stores
+/products/:id
+/become-seller
+/how-it-works
+/help-centre
+/contact
+/trust-safety
+```
+
+### Focused auth/status pages
+
+Use `MinimalAuthHeader` for focused auth pages instead of the full marketplace navigation.
+
+Use it for:
+
+```txt
+/register-buyer
+/register-seller
+/forgot-password
+/reset-password
+/email-verification
+/phone-verification
+/account-suspended
+```
+
+These pages use a clean card-focused layout with a subtle dotted background.
+
+## Design System
+
+The design system is documented in `DESIGN.md`.
+
+Current direction:
+
+* Deep green primary color: `#003527`
+* Green hover/primary container: `#064e3b`
+* Warm gold accent: `#fed65b` / `#ffe088`
+* Soft off-white page background: `#f8f9ff`
+* White card surface: `#ffffff`
+* Soft blue-grey surface: `#eff4ff`
+* Border color: `#bfc9c3`
+* Main text: `#121c2a`
+* Muted text: `#404944`
+* Soft text: `#707974`
+* Font: Hanken Grotesk
+* Icons: Material Symbols
+
+## Public UI Rules
+
+* Use `Open Market` consistently.
+* Do not use placeholder names such as `Mzansi Market`.
+* Do not show Admin on public-facing pages.
+* Public auth pages should only mention Buyer, Seller, or Buyer + Seller.
+* Use `shopping_bag` for the Open Market logo and cart.
+* Do not use `shopping_cart` or `shopping_basket` for cart icons.
+* Avoid `href="#"` for real navigation.
+* Footer year must be 2026.
+
+## Marketplace Trust Language
+
+Use:
+
+* Buyer Protection
+* protected payment
+* payment held safely by Open Market
+* payments held until delivery is confirmed
+* seller payout after delivery confirmation
+
+Avoid:
+
+* escrow
+* threatening restriction language
+* public admin references
+
+## Key User Flows
+
+### Buyer Registration Flow
+
+```txt
+/register
+  → /register-buyer
+  → /email-verification
+  → /phone-verification
+  → /buyer-dashboard
+```
+
+### Seller Registration Flow
+
+```txt
+/register
+  → /register-seller
+  → /email-verification
+  → /phone-verification
+  → /seller-dashboard or seller setup later
+```
+
+### Password Recovery Flow
+
+```txt
+/forgot-password
+  → /reset-password
+  → /login
+```
+
+### Account Restriction Flow
+
+```txt
+/login
+  → /account-suspended
+  → /contact
+```
+
+## Planned Main Application Areas
 
 ### Public Pages
 
 * Home
 * Shop
+* Stores
+* Store details
 * Product details
 * Become a Seller
 * How It Works
@@ -204,19 +438,6 @@ module-name.types.ts
 * Terms
 * Privacy
 * Shipping Info
-
-### Authentication Pages
-
-* Login
-* Register routing page
-* Register as Buyer
-* Register as Seller
-* Forgot Password
-* Reset Password
-* Email Verification
-* Phone / OTP Verification
-* Account Type Selection
-* Account Suspended
 
 ### Buyer Pages
 
@@ -254,105 +475,19 @@ module-name.types.ts
 * Seller Disputes
 * Seller Messages
 
-## Design System
-
-The design system is documented in `DESIGN.md`.
-
-Current direction:
-
-* Deep green primary color
-* Warm gold accent color
-* Soft off-white page background
-* Blue-grey surface cards
-* Hanken Grotesk typography
-* Rounded cards and inputs
-* Ambient shadows
-* Material Symbols icons
-* `shopping_bag` for logo and cart
-* Dark public footer
-* Mobile bottom navigation
-* Trust-focused marketplace language
-
-## Public UI Rules
-
-* Use `Open Market` consistently.
-* Do not use placeholder names such as `Mzansi Market`.
-* Do not show Admin on public-facing pages.
-* Public auth pages should only mention Buyer, Seller, or Buyer + Seller.
-* Use `shopping_bag` for the Open Market logo and cart.
-* Do not use `shopping_cart` or `shopping_basket` for cart icons.
-* Avoid `href="#"` except for visual-only prototype buttons.
-* Footer year must be 2026.
-
-## Marketplace Trust Language
-
-Use:
-
-* Buyer Protection
-* protected payment
-* payment held safely by Open Market
-* payments held until delivery is confirmed
-* seller payout after delivery confirmation
-
-Avoid:
-
-* escrow
-* threatening restriction language
-* public admin references
-
-## Key User Flows
-
-### Buyer Registration Flow
-
-```txt
-register.html
-  → register-buyer.html
-  → email-verification.html
-  → phone-verification.html
-  → buyer-dashboard.html
-```
-
-### Seller Registration Flow
-
-```txt
-register.html
-  → register-seller.html
-  → email-verification.html
-  → phone-verification.html
-  → seller setup / seller dashboard
-```
-
-### Password Recovery Flow
-
-```txt
-forgot-password.html
-  → reset-password.html
-  → login.html
-```
-
-### Account Restriction Flow
-
-```txt
-login.html
-  → account-suspended.html
-  → contact.html
-```
-
 ## Initial Setup
 
-### 1. Create or clone the repository
+### 1. Clone or open the repository
 
 ```bash
 git clone <repo-url>
 cd open-market
 ```
 
-Or create it locally:
+Or open the existing local project:
 
 ```bash
-mkdir open-market
-cd open-market
-git init
+cd D:\open-market
 ```
 
 ### 2. Install frontend dependencies
@@ -371,7 +506,9 @@ npm install
 
 ### 4. Configure backend environment
 
-Create `backend/.env`:
+Create `backend/.env` from the example values.
+
+Example:
 
 ```env
 DATABASE_URL="postgresql://postgres:postgres@localhost:5432/open_market?schema=public"
@@ -381,20 +518,44 @@ JWT_ACCESS_SECRET="replace_me_access_secret"
 JWT_REFRESH_SECRET="replace_me_refresh_secret"
 ```
 
-### 5. Run the backend
+Important: do not commit `backend/.env`.
+
+## Running the Project
+
+### Run the backend
+
+From the project root:
 
 ```bash
 cd backend
 npm run dev
 ```
 
-Expected health endpoint:
+Expected backend URL:
+
+```txt
+http://localhost:5000
+```
+
+Health check:
 
 ```txt
 http://localhost:5000/api/health
 ```
 
-### 6. Run the frontend
+Expected response shape:
+
+```json
+{
+  "ok": true,
+  "service": "open-market-api",
+  "time": "..."
+}
+```
+
+### Run the frontend
+
+From the project root in a second terminal:
 
 ```bash
 cd frontend
@@ -411,10 +572,90 @@ http://localhost:5173
 
 * Keep reusable UI in `frontend/src/components`.
 * Keep pages in `frontend/src/pages`.
+* Keep shared page shells in `frontend/src/layouts`.
+* Keep route definitions in `frontend/src/routes/AppRoutes.jsx`.
 * Keep backend business logic inside `backend/src/modules`.
-* Keep validation close to the module that uses it.
 * Keep database planning files in `docs/database`.
 * Keep API route planning files in `docs/api`.
 * Keep user-flow and page planning files in `docs/product`.
 * Keep `DESIGN.md` as the visual source of truth.
-* Keep DBML as the database planning source of truth until Prisma implementation begins.
+* Keep `AGENT.md` updated for coding-agent instructions.
+* Keep DBML as the database planning source of truth until Prisma implementation is completed.
+
+## Git Workflow
+
+Check changes:
+
+```bash
+git status
+```
+
+Stage and commit:
+
+```bash
+git add .
+git commit -m "Describe the change clearly"
+```
+
+Push:
+
+```bash
+git push
+```
+
+## Recommended `.gitignore` Notes
+
+The project should ignore local environment files and runtime logs.
+
+Recommended entries:
+
+```gitignore
+node_modules/
+dist/
+build/
+.env
+.env.local
+.env.*.local
+*.log
+frontend/vite-dev.log
+frontend/vite-dev.err.log
+backend/uploads/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+```
+
+## Current Status
+
+The project is in early development.
+
+Completed so far:
+
+1. Initial monorepo structure.
+2. React frontend setup with Vite and Tailwind.
+3. Express TypeScript backend setup.
+4. Shared public layout components.
+5. Minimal auth header for focused auth pages.
+6. Core authentication and account-access pages.
+7. Home page and shop page started.
+8. Database planning documentation started with DBML.
+9. Agent instructions added in `AGENT.md`.
+
+## Recommended Next Pages
+
+Continue public marketplace pages first:
+
+```txt
+/stores
+/products/:id
+/become-seller
+/how-it-works
+/help-centre
+/contact
+/trust-safety
+/cart
+```
+
+Then continue buyer and seller dashboards.
+

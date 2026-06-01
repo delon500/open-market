@@ -1,0 +1,247 @@
+﻿Open Market Project Folder Snapshot
+Generated: 2026-06-01 13:36:25 +02:00
+Root: D:\open-market
+
+Folder tree:
+open-market/
+|-- backend/
+|   |-- prisma/
+|   |   +-- schema.prisma
+|   |   |-- common/
+|   |   |   |-- errors/
+|   |   |   |   |-- ApiError.ts
+|   |   |   |   +-- errorHandler.ts
+|   |   |   |-- middleware/
+|   |   |   |-- types/
+|   |   |   +-- utils/
+|   |   |-- config/
+|   |   |   +-- env.ts
+|   |   |-- modules/
+|   |   |   |-- auth/
+|   |   |   |-- buyers/
+|   |   |   |-- carts/
+|   |   |   |-- categories/
+|   |   |   |-- deliveries/
+|   |   |   |-- disputes/
+|   |   |   |-- messages/
+|   |   |   |-- notifications/
+|   |   |   |-- orders/
+|   |   |   |-- payments/
+|   |   |   |-- payouts/
+|   |   |   |-- products/
+|   |   |   |-- refunds/
+|   |   |   |-- reviews/
+|   |   |   |-- sellers/
+|   |   |   |-- support/
+|   |   |   +-- users/
+|   |   |-- routes/
+|   |   |   +-- index.ts
+|   |   |-- app.ts
+|   |   +-- server.ts
+|   |-- .env
+|   |-- .gitignore
+|   |-- package.json
+|   |-- package-lock.json
+|   |-- prisma.config.ts
+|   +-- tsconfig.json
+|-- docs/
+|   |-- api/
+|   |   +-- api-routes.md
+|   |-- database/
+|   |   +-- open-market.dbml
+|   +-- product/
+|       |-- pages-checklist.md
+|       +-- user-flows.md
+|-- frontend/
+|   |-- public/
+|   |-- src/
+|   |   |-- assets/
+|   |   |   +-- icons/
+|   |   |       +-- google.svg
+|   |   |-- components/
+|   |   |   |-- auth/
+|   |   |   |   |-- ConsentCheckbox.jsx
+|   |   |   |   |-- PasswordField.jsx
+|   |   |   |   |-- PasswordInput.jsx
+|   |   |   |   |-- PasswordStrengthMeter.jsx
+|   |   |   |   +-- SocialButton.jsx
+|   |   |   |-- common/
+|   |   |   |   +-- FormInput.jsx
+|   |   |   |-- layout/
+|   |   |   |   |-- AnnouncementBar.jsx
+|   |   |   |   |-- MinimalAuthHeader.jsx
+|   |   |   |   |-- MobileBottomNav.jsx
+|   |   |   |   |-- PublicFooter.jsx
+|   |   |   |   +-- PublicHeader.jsx
+|   |   |   |-- order/
+|   |   |   |-- payment/
+|   |   |   +-- store/
+|   |   |-- context/
+|   |   |-- data/
+|   |   |-- hooks/
+|   |   |-- layouts/
+|   |   |   |-- AuthLayout.jsx
+|   |   |   +-- PublicLayout.jsx
+|   |   |-- pages/
+|   |   |   |-- auth/
+|   |   |   |   |-- AccountSuspendedPage.jsx
+|   |   |   |   |-- EmailVerificationPage.jsx
+|   |   |   |   |-- ForgotPasswordPage.jsx
+|   |   |   |   |-- LoginPage.jsx
+|   |   |   |   |-- PhoneVerificationPage.jsx
+|   |   |   |   |-- RegisterBuyerPage.jsx
+|   |   |   |   |-- RegisterPage.jsx
+|   |   |   |   |-- RegisterSellerPage.jsx
+|   |   |   |   +-- ResetPasswordPage.jsx
+|   |   |   |-- buyer/
+|   |   |   |-- public/
+|   |   |   |   |-- HomePage.jsx
+|   |   |   |   +-- ShopPage.jsx
+|   |   |   +-- seller/
+|   |   |-- routes/
+|   |   |   +-- AppRoutes.jsx
+|   |   |-- services/
+|   |   |-- styles/
+|   |   |-- utils/
+|   |   |-- App.css
+|   |   |-- App.jsx
+|   |   |-- index.css
+|   |   +-- main.jsx
+|   |-- .gitignore
+|   |-- eslint.config.js
+|   |-- index.html
+|   |-- package.json
+|   |-- package-lock.json
+|   |-- README.md
+|   |-- vite.config.js
+|   |-- vite-dev.err.log
+|   +-- vite-dev.log
+|-- .env.example
+|-- .gitignore
+|-- AGENT.md
+|-- DESIGN.md
++-- README.md
+
+Flat file list:
+open-market/.env.example
+open-market/.gitignore
+open-market/AGENT.md
+open-market/backend/.env
+open-market/backend/.gitignore
+open-market/backend/package.json
+open-market/backend/package-lock.json
+open-market/backend/prisma.config.ts
+open-market/backend/prisma/schema.prisma
+open-market/backend/src/app.ts
+open-market/backend/src/common/errors/ApiError.ts
+open-market/backend/src/common/errors/errorHandler.ts
+open-market/backend/src/config/env.ts
+open-market/backend/src/routes/index.ts
+open-market/backend/src/server.ts
+open-market/backend/tsconfig.json
+open-market/DESIGN.md
+open-market/docs/api/api-routes.md
+open-market/docs/database/open-market.dbml
+open-market/docs/product/pages-checklist.md
+open-market/docs/product/user-flows.md
+open-market/frontend/.gitignore
+open-market/frontend/eslint.config.js
+open-market/frontend/index.html
+open-market/frontend/package.json
+open-market/frontend/package-lock.json
+open-market/frontend/README.md
+open-market/frontend/src/App.css
+open-market/frontend/src/App.jsx
+open-market/frontend/src/assets/icons/google.svg
+open-market/frontend/src/components/auth/ConsentCheckbox.jsx
+open-market/frontend/src/components/auth/PasswordField.jsx
+open-market/frontend/src/components/auth/PasswordInput.jsx
+open-market/frontend/src/components/auth/PasswordStrengthMeter.jsx
+open-market/frontend/src/components/auth/SocialButton.jsx
+open-market/frontend/src/components/common/FormInput.jsx
+open-market/frontend/src/components/layout/AnnouncementBar.jsx
+open-market/frontend/src/components/layout/MinimalAuthHeader.jsx
+open-market/frontend/src/components/layout/MobileBottomNav.jsx
+open-market/frontend/src/components/layout/PublicFooter.jsx
+open-market/frontend/src/components/layout/PublicHeader.jsx
+open-market/frontend/src/index.css
+open-market/frontend/src/layouts/AuthLayout.jsx
+open-market/frontend/src/layouts/PublicLayout.jsx
+open-market/frontend/src/main.jsx
+open-market/frontend/src/pages/auth/AccountSuspendedPage.jsx
+open-market/frontend/src/pages/auth/EmailVerificationPage.jsx
+open-market/frontend/src/pages/auth/ForgotPasswordPage.jsx
+open-market/frontend/src/pages/auth/LoginPage.jsx
+open-market/frontend/src/pages/auth/PhoneVerificationPage.jsx
+open-market/frontend/src/pages/auth/RegisterBuyerPage.jsx
+open-market/frontend/src/pages/auth/RegisterPage.jsx
+open-market/frontend/src/pages/auth/RegisterSellerPage.jsx
+open-market/frontend/src/pages/auth/ResetPasswordPage.jsx
+open-market/frontend/src/pages/public/HomePage.jsx
+open-market/frontend/src/pages/public/ShopPage.jsx
+open-market/frontend/src/routes/AppRoutes.jsx
+open-market/frontend/vite.config.js
+open-market/frontend/vite-dev.err.log
+open-market/frontend/vite-dev.log
+open-market/README.md
+
+Installed packages:
+
+Frontend package: frontend@0.0.0
+Location: D:\open-market\frontend
+
+Frontend dependencies:
+- @tailwindcss/vite@4.3.0
+- axios@1.16.1
+- lucide-react@1.16.0
+- react@19.2.6
+- react-dom@19.2.6
+- react-router-dom@7.15.1
+- tailwindcss@4.3.0
+
+Frontend devDependencies:
+- @eslint/js@10.0.1
+- @types/react@19.2.15
+- @types/react-dom@19.2.3
+- @vitejs/plugin-react@6.0.2
+- eslint@10.4.0
+- eslint-plugin-react-hooks@7.1.1
+- eslint-plugin-react-refresh@0.5.2
+- globals@17.6.0
+- vite@8.0.14
+
+Frontend extraneous packages installed on disk but not declared in package.json:
+- @emnapi/core@1.10.0
+- @emnapi/runtime@1.10.0
+- @emnapi/wasi-threads@1.2.1
+- @napi-rs/wasm-runtime@1.1.4
+- @tybys/wasm-util@0.10.2
+- tslib@2.8.1
+
+Backend package: backend@1.0.0
+Location: D:\open-market\backend
+
+Backend dependencies:
+- @prisma/client@7.8.0
+- bcryptjs@3.0.3
+- cookie-parser@1.4.7
+- cors@2.8.6
+- dotenv@17.4.2
+- express@5.2.1
+- helmet@8.2.0
+- jsonwebtoken@9.0.3
+- morgan@1.10.1
+- zod@4.4.3
+
+Backend devDependencies:
+- @types/bcryptjs@2.4.6
+- @types/cookie-parser@1.4.10
+- @types/cors@2.8.19
+- @types/express@5.0.6
+- @types/jsonwebtoken@9.0.10
+- @types/morgan@1.9.10
+- @types/node@25.9.1
+- nodemon@3.1.14
+- prisma@7.8.0
+- tsx@4.22.3
+- typescript@6.0.3

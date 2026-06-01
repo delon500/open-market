@@ -25,3 +25,4 @@ backend/prisma/*.db
 # Uploads
 backend/uploads/
 frontend/dist/
+AGENTS.md

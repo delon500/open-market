@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import HomePage from "../pages/public/HomePage";
+import ShopPage from "../pages/public/ShopPage.jsx";
 import LoginPage from "../pages/auth/LoginPage";
 import RegisterPage from "../pages/auth/RegisterPage";
 import RegisterBuyerPage from "../pages/auth/RegisterBuyerPage.jsx";
@@ -27,7 +28,7 @@ export default function AppRoutes() {
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<LoginPage />} />
 
-            <Route path="/shop" element={<PlaceholderPage title="Shop" />} />
+            <Route path="/shop" element={<ShopPage />} />
             <Route path="/cart" element={<PlaceholderPage title="Cart" />} />
             <Route path="/account-type" element={<PlaceholderPage title="Account Type Selection" />} />
             <Route path="/register" element={<RegisterPage />} />
