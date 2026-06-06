@@ -12,6 +12,7 @@ import PhoneVerificationPage from "../pages/auth/PhoneVerificationPage.jsx";
 import AccountSuspendedPage from "../pages/auth/AccountSuspendedPage.jsx";
 import StoresPage from "../pages/public/StoresPage";
 import ProductDetailsPage from "../pages/public/ProductDetailsPage.jsx";
+import StoreDetailsPage from "../pages/public/StoreDetailsPage";
 
 function PlaceholderPage({ title }) {
     return (
@@ -43,6 +44,7 @@ export default function AppRoutes() {
             <Route path="/account-suspended" element={<AccountSuspendedPage />} />
             <Route path="/stores" element={<StoresPage />} />
             <Route path="/products/:productId" element={<ProductDetailsPage />} />
+            <Route path="/stores/:storeId" element={<StoreDetailsPage />} />
             <Route path="/buyer-dashboard" element={<PlaceholderPage title="Buyer Dashboard" />} />
             <Route path="/seller-dashboard" element={<PlaceholderPage title="Seller Dashboard" />} />
 

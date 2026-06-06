@@ -1,0 +1,203 @@
+// Centralizes the prototype store detail data and filter options for the store details page.
+export const storeDetailsStores = [
+    {
+        id: "kasi-kicks",
+        name: "Kasi Kicks",
+        initials: "KK",
+        avatarClass: "bg-[#dbeafe] text-[#1e40af]",
+        category: "Sneakers",
+        location: "Soweto, Johannesburg",
+        shortLocation: "Soweto, JHB",
+        rating: 4.8,
+        reviewCount: 24,
+        productsCount: 128,
+        sales: "340+",
+        response: "Usually within 2 hours",
+        verified: true,
+        joined: "Joined 2025",
+        delivery: "3-5 business days - Nationwide",
+        shortDelivery: "3-5 days",
+        description:
+            "Fresh sneakers, streetwear shoes, and everyday kicks from a trusted local seller based in Soweto.",
+        coverImage:
+            "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&w=1400&q=80",
+        products: [
+            {
+                id: 1,
+                title: "Black Casual Sneakers",
+                category: "Sneakers",
+                condition: "New",
+                price: 350,
+                oldPrice: 490,
+                rating: 4.8,
+                reviews: 24,
+                image:
+                    "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80",
+            },
+            {
+                id: 2,
+                title: "White Running Sneakers",
+                category: "Sneakers",
+                condition: "New",
+                price: 420,
+                oldPrice: null,
+                rating: 4.6,
+                reviews: 18,
+                image:
+                    "https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=600&q=80",
+            },
+            {
+                id: 3,
+                title: "Grey Low Top Sneakers",
+                category: "Sneakers",
+                condition: "Like New",
+                price: 380,
+                oldPrice: 520,
+                rating: 4.7,
+                reviews: 11,
+                image:
+                    "https://images.unsplash.com/photo-1560343090-f0409e92791a?auto=format&fit=crop&w=600&q=80",
+            },
+            {
+                id: 4,
+                title: "Retro Style Sneakers",
+                category: "Sneakers",
+                condition: "New",
+                price: 510,
+                oldPrice: null,
+                rating: 4.9,
+                reviews: 8,
+                image:
+                    "https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=600&q=80",
+            },
+            {
+                id: 5,
+                title: "High-Top Canvas Kicks",
+                category: "Sneakers",
+                condition: "Like New",
+                price: 295,
+                oldPrice: 380,
+                rating: 4.5,
+                reviews: 6,
+                image:
+                    "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80",
+            },
+            {
+                id: 6,
+                title: "Court Classic Sneakers",
+                category: "Sneakers",
+                condition: "New",
+                price: 460,
+                oldPrice: null,
+                rating: 4.7,
+                reviews: 15,
+                image:
+                    "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=600&q=80",
+            },
+        ],
+        reviews: [
+            {
+                initials: "TM",
+                name: "Thabo M.",
+                date: "3 days ago",
+                stars: 5,
+                avatarClass: "bg-[#dbeafe] text-[#1e40af]",
+                product: "Black Casual Sneakers",
+                text: "Good seller. Product looked exactly like the pictures and delivery was quick. Would definitely buy from Kasi Kicks again.",
+            },
+            {
+                initials: "LK",
+                name: "Lerato K.",
+                date: "1 week ago",
+                stars: 5,
+                avatarClass: "bg-[#dcfce7] text-[#14532d]",
+                product: "White Running Sneakers",
+                text: "Great communication and smooth buying experience. Seller responded fast when I had a question about sizing.",
+            },
+            {
+                initials: "NP",
+                name: "Nomsa P.",
+                date: "2 weeks ago",
+                stars: 4,
+                avatarClass: "bg-[#fff7ed] text-[#9a3412]",
+                product: "Grey Low Top Sneakers",
+                text: "Solid pair of sneakers for the price. Packaging was neat and the seller kept me updated throughout.",
+            },
+        ],
+    },
+    {
+        id: "bloom-beauty",
+        name: "Bloom Beauty",
+        initials: "BB",
+        avatarClass: "bg-[#fce7f3] text-[#9d174d]",
+        category: "Beauty",
+        location: "Durban",
+        shortLocation: "Durban",
+        rating: 4.7,
+        reviewCount: 18,
+        productsCount: 64,
+        sales: "210+",
+        response: "Usually within 3 hours",
+        verified: true,
+        joined: "Joined 2025",
+        delivery: "2-5 business days - Nationwide",
+        shortDelivery: "2-5 days",
+        description:
+            "Perfumes, skincare, makeup, and beauty essentials from a local beauty seller.",
+        coverImage:
+            "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1400&q=80",
+        products: [
+            {
+                id: 5,
+                title: "Premium Signature Perfume",
+                category: "Beauty",
+                condition: "Like New",
+                price: 420,
+                oldPrice: null,
+                rating: 4.7,
+                reviews: 12,
+                image:
+                    "https://images.unsplash.com/photo-1585386959984-a4155224a1ad?auto=format&fit=crop&w=600&q=80",
+            },
+            {
+                id: 6,
+                title: "Glow Skin Care Set",
+                category: "Beauty",
+                condition: "New",
+                price: 320,
+                oldPrice: 390,
+                rating: 4.8,
+                reviews: 9,
+                image:
+                    "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80",
+            },
+        ],
+        reviews: [
+            {
+                initials: "AM",
+                name: "Anele M.",
+                date: "4 days ago",
+                stars: 5,
+                avatarClass: "bg-[#fce7f3] text-[#9d174d]",
+                product: "Glow Skin Care Set",
+                text: "Beautifully packaged and the seller answered all my questions before I bought.",
+            },
+        ],
+    },
+];
+
+export const storeProductFilters = [
+    { label: "All", value: "all" },
+    { label: "New", value: "New" },
+    { label: "Like New", value: "Like New" },
+    { label: "Under R400", value: "under400" },
+    { label: "R400+", value: "over400" },
+];
+
+export const storeRatingBreakdown = [
+    { label: "5 star", percent: 72, color: "#003527" },
+    { label: "4 star", percent: 18, color: "#95d3ba" },
+    { label: "3 star", percent: 6, color: "#fed65b" },
+    { label: "2 star", percent: 3, color: "#fca5a5" },
+    { label: "1 star", percent: 1, color: "#fca5a5" },
+];
