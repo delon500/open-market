@@ -923,7 +923,7 @@ function BecomeSellerStyles() {
                 align-items: center;
                 gap: 8px;
                 border: 1px solid rgba(254,214,91,.3);
-                background: rgba(254,214,91,.15);
+                background: transparent;
                 border-radius: 999px;
                 color: var(--accent);
                 padding: 9px 16px;
@@ -1007,7 +1007,7 @@ function BecomeSellerStyles() {
                 align-items: center;
                 gap: 8px;
                 border-radius: 999px;
-                background: rgba(255,255,255,.1);
+                background: transparent;
                 color: rgba(255,255,255,.78);
                 padding: 7px 12px;
                 font-size: 12px;
@@ -1374,10 +1374,8 @@ function BecomeSellerStyles() {
                 place-items: center;
                 width: 48px;
                 height: 48px;
-                border-radius: 16px;
                 margin-bottom: 18px;
                 color: var(--primary);
-                background: #dcfce7;
             }
 
             .become-seller-page .benefit-top {
@@ -1392,26 +1390,18 @@ function BecomeSellerStyles() {
             }
 
             .become-seller-page .seller-icon-ai {
-                background: #fef9c3;
                 color: #854d0e;
             }
 
             .become-seller-page .seller-icon-orders {
-                background: #dbeafe;
                 color: #1e40af;
             }
 
-            .become-seller-page .seller-icon-collect {
-                background: #dcfce7;
-            }
-
             .become-seller-page .seller-icon-protection {
-                background: #ccfbf1;
                 color: #0f766e;
             }
 
             .become-seller-page .seller-icon-support {
-                background: #ede9fe;
                 color: #4c1d95;
             }
 
@@ -1439,7 +1429,7 @@ function BecomeSellerStyles() {
                 font-weight: 900;
                 text-transform: uppercase;
                 letter-spacing: .06em;
-                background: #fef9c3;
+                background: transparent;
                 color: #854d0e;
             }
 
@@ -1491,13 +1481,13 @@ function BecomeSellerStyles() {
             }
 
             .become-seller-page .eyebrow-ai {
-                background: #fef9c3;
+                background: transparent;
                 color: #854d0e;
                 border-color: #fde68a;
             }
 
             .become-seller-page .eyebrow-collect {
-                background: #f0faf6;
+                background: transparent;
                 color: #003527;
                 border-color: #95d3ba;
             }
@@ -1810,11 +1800,7 @@ function BecomeSellerStyles() {
             }
 
             .become-seller-page .steps-box {
-                border: 1px solid var(--border-soft);
-                border-radius: 28px;
-                background: white;
-                padding: 24px;
-                box-shadow: var(--shadow);
+                padding: 0;
             }
 
             .become-seller-page .steps-grid {
@@ -1877,7 +1863,7 @@ function BecomeSellerStyles() {
 
             @media (min-width: 768px) {
                 .become-seller-page .steps-box {
-                    padding: 40px;
+                    padding: 0;
                 }
 
                 .become-seller-page .steps-grid {
