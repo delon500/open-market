@@ -15,6 +15,7 @@ import ProductDetailsPage from "../pages/public/ProductDetailsPage.jsx";
 import StoreDetailsPage from "../pages/public/StoreDetailsPage";
 import BecomeSellerPage from "../pages/public/BecomeSellerPage.jsx";
 import HowItWorksPage from "../pages/public/HowItWorksPage.jsx";
+import HelpCentrePage from "../pages/public/HelpCentrePage.jsx";
 
 function PlaceholderPage({ title }) {
     return (
@@ -49,6 +50,7 @@ export default function AppRoutes() {
             <Route path="/stores/:storeId" element={<StoreDetailsPage />} />
             <Route path="/become-seller" element={<BecomeSellerPage />} />
             <Route path="/how-it-works" element={<HowItWorksPage />} />
+            <Route path="/help-centre" element={<HelpCentrePage />} />
             <Route path="/buyer-dashboard" element={<PlaceholderPage title="Buyer Dashboard" />} />
             <Route path="/seller-dashboard" element={<PlaceholderPage title="Seller Dashboard" />} />
 

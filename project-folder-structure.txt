@@ -1,12 +1,15 @@
-﻿Open Market Project Folder Snapshot
-Generated: 2026-06-01 13:36:25 +02:00
+Open Market Project Folder Snapshot
+Generated: 2026-06-10 00:56:40 +02:00
 Root: D:\open-market
+
+Excluded from this snapshot: .git, .idea, node_modules, dist, build, coverage, logs, and real .env files.
 
 Folder tree:
 open-market/
 |-- backend/
 |   |-- prisma/
 |   |   +-- schema.prisma
+|   |-- src/
 |   |   |-- common/
 |   |   |   |-- errors/
 |   |   |   |   |-- ApiError.ts
@@ -38,10 +41,9 @@ open-market/
 |   |   |   +-- index.ts
 |   |   |-- app.ts
 |   |   +-- server.ts
-|   |-- .env
 |   |-- .gitignore
-|   |-- package.json
 |   |-- package-lock.json
+|   |-- package.json
 |   |-- prisma.config.ts
 |   +-- tsconfig.json
 |-- docs/
@@ -75,9 +77,54 @@ open-market/
 |   |   |   |   +-- PublicHeader.jsx
 |   |   |   |-- order/
 |   |   |   |-- payment/
-|   |   |   +-- store/
+|   |   |   |-- product/
+|   |   |   |   |-- BuyerProtectionCard.jsx
+|   |   |   |   |-- DeliveryInfo.jsx
+|   |   |   |   |-- MobileAddToCart.jsx
+|   |   |   |   |-- ProductBreadcrumb.jsx
+|   |   |   |   |-- ProductGallery.jsx
+|   |   |   |   |-- ProductLightbox.jsx
+|   |   |   |   |-- ProductReviews.jsx
+|   |   |   |   |-- ProductTabs.jsx
+|   |   |   |   |-- PurchasePanel.jsx
+|   |   |   |   |-- RelatedProducts.jsx
+|   |   |   |   |-- SellerCard.jsx
+|   |   |   |   +-- StarRating.jsx
+|   |   |   |-- shop/
+|   |   |   |   |-- EmptyState.jsx
+|   |   |   |   |-- FilterControls.jsx
+|   |   |   |   |-- FilterDrawer.jsx
+|   |   |   |   |-- ProductCard.jsx
+|   |   |   |   +-- ShopToolbar.jsx
+|   |   |   |-- store/
+|   |   |   |-- store-details/
+|   |   |   |   |-- BuyerProtectionPanel.jsx
+|   |   |   |   |-- MobileStoreActions.jsx
+|   |   |   |   |-- MobileStoreStrip.jsx
+|   |   |   |   |-- SaveStoreButton.jsx
+|   |   |   |   |-- StoreBreadcrumb.jsx
+|   |   |   |   |-- StoreDetailsStyles.jsx
+|   |   |   |   |-- StoreEmptyState.jsx
+|   |   |   |   |-- StoreFilterChips.jsx
+|   |   |   |   |-- StoreHero.jsx
+|   |   |   |   |-- StoreInfoCard.jsx
+|   |   |   |   |-- StoreProductCard.jsx
+|   |   |   |   |-- StoreProductToolbar.jsx
+|   |   |   |   |-- StoreRating.jsx
+|   |   |   |   |-- StoreReviewsPanel.jsx
+|   |   |   |   |-- StoreSectionTabs.jsx
+|   |   |   |   +-- StoreToast.jsx
+|   |   |   +-- stores/
+|   |   |       |-- EmptyStoresState.jsx
+|   |   |       |-- StoreCard.jsx
+|   |   |       |-- StoreStats.jsx
+|   |   |       +-- StoreToolbar.jsx
 |   |   |-- context/
 |   |   |-- data/
+|   |   |   |-- productDetails.js
+|   |   |   |-- shopProducts.js
+|   |   |   |-- storeDetails.js
+|   |   |   +-- stores.js
 |   |   |-- hooks/
 |   |   |-- layouts/
 |   |   |   |-- AuthLayout.jsx
@@ -95,8 +142,15 @@ open-market/
 |   |   |   |   +-- ResetPasswordPage.jsx
 |   |   |   |-- buyer/
 |   |   |   |-- public/
+|   |   |   |   |-- BecomeSellerPage.jsx
+|   |   |   |   |-- HelpCentrePage.html
+|   |   |   |   |-- HelpCentrePage.jsx
 |   |   |   |   |-- HomePage.jsx
-|   |   |   |   +-- ShopPage.jsx
+|   |   |   |   |-- HowItWorksPage.jsx
+|   |   |   |   |-- ProductDetailsPage.jsx
+|   |   |   |   |-- ShopPage.jsx
+|   |   |   |   |-- StoreDetailsPage.jsx
+|   |   |   |   +-- StoresPage.jsx
 |   |   |   +-- seller/
 |   |   |-- routes/
 |   |   |   +-- AppRoutes.jsx
@@ -110,48 +164,34 @@ open-market/
 |   |-- .gitignore
 |   |-- eslint.config.js
 |   |-- index.html
-|   |-- package.json
 |   |-- package-lock.json
+|   |-- package.json
 |   |-- README.md
-|   |-- vite.config.js
-|   |-- vite-dev.err.log
-|   +-- vite-dev.log
+|   +-- vite.config.js
 |-- .env.example
 |-- .gitignore
-|-- AGENT.md
+|-- AGENTS.md
 |-- DESIGN.md
+|-- project-folder-structure.txt
 +-- README.md
 
-Flat file list:
-open-market/.env.example
-open-market/.gitignore
-open-market/AGENT.md
-open-market/backend/.env
-open-market/backend/.gitignore
-open-market/backend/package.json
-open-market/backend/package-lock.json
-open-market/backend/prisma.config.ts
+Files:
 open-market/backend/prisma/schema.prisma
-open-market/backend/src/app.ts
 open-market/backend/src/common/errors/ApiError.ts
 open-market/backend/src/common/errors/errorHandler.ts
 open-market/backend/src/config/env.ts
 open-market/backend/src/routes/index.ts
+open-market/backend/src/app.ts
 open-market/backend/src/server.ts
+open-market/backend/.gitignore
+open-market/backend/package-lock.json
+open-market/backend/package.json
+open-market/backend/prisma.config.ts
 open-market/backend/tsconfig.json
-open-market/DESIGN.md
 open-market/docs/api/api-routes.md
 open-market/docs/database/open-market.dbml
 open-market/docs/product/pages-checklist.md
 open-market/docs/product/user-flows.md
-open-market/frontend/.gitignore
-open-market/frontend/eslint.config.js
-open-market/frontend/index.html
-open-market/frontend/package.json
-open-market/frontend/package-lock.json
-open-market/frontend/README.md
-open-market/frontend/src/App.css
-open-market/frontend/src/App.jsx
 open-market/frontend/src/assets/icons/google.svg
 open-market/frontend/src/components/auth/ConsentCheckbox.jsx
 open-market/frontend/src/components/auth/PasswordField.jsx
@@ -164,10 +204,49 @@ open-market/frontend/src/components/layout/MinimalAuthHeader.jsx
 open-market/frontend/src/components/layout/MobileBottomNav.jsx
 open-market/frontend/src/components/layout/PublicFooter.jsx
 open-market/frontend/src/components/layout/PublicHeader.jsx
-open-market/frontend/src/index.css
+open-market/frontend/src/components/product/BuyerProtectionCard.jsx
+open-market/frontend/src/components/product/DeliveryInfo.jsx
+open-market/frontend/src/components/product/MobileAddToCart.jsx
+open-market/frontend/src/components/product/ProductBreadcrumb.jsx
+open-market/frontend/src/components/product/ProductGallery.jsx
+open-market/frontend/src/components/product/ProductLightbox.jsx
+open-market/frontend/src/components/product/ProductReviews.jsx
+open-market/frontend/src/components/product/ProductTabs.jsx
+open-market/frontend/src/components/product/PurchasePanel.jsx
+open-market/frontend/src/components/product/RelatedProducts.jsx
+open-market/frontend/src/components/product/SellerCard.jsx
+open-market/frontend/src/components/product/StarRating.jsx
+open-market/frontend/src/components/shop/EmptyState.jsx
+open-market/frontend/src/components/shop/FilterControls.jsx
+open-market/frontend/src/components/shop/FilterDrawer.jsx
+open-market/frontend/src/components/shop/ProductCard.jsx
+open-market/frontend/src/components/shop/ShopToolbar.jsx
+open-market/frontend/src/components/store-details/BuyerProtectionPanel.jsx
+open-market/frontend/src/components/store-details/MobileStoreActions.jsx
+open-market/frontend/src/components/store-details/MobileStoreStrip.jsx
+open-market/frontend/src/components/store-details/SaveStoreButton.jsx
+open-market/frontend/src/components/store-details/StoreBreadcrumb.jsx
+open-market/frontend/src/components/store-details/StoreDetailsStyles.jsx
+open-market/frontend/src/components/store-details/StoreEmptyState.jsx
+open-market/frontend/src/components/store-details/StoreFilterChips.jsx
+open-market/frontend/src/components/store-details/StoreHero.jsx
+open-market/frontend/src/components/store-details/StoreInfoCard.jsx
+open-market/frontend/src/components/store-details/StoreProductCard.jsx
+open-market/frontend/src/components/store-details/StoreProductToolbar.jsx
+open-market/frontend/src/components/store-details/StoreRating.jsx
+open-market/frontend/src/components/store-details/StoreReviewsPanel.jsx
+open-market/frontend/src/components/store-details/StoreSectionTabs.jsx
+open-market/frontend/src/components/store-details/StoreToast.jsx
+open-market/frontend/src/components/stores/EmptyStoresState.jsx
+open-market/frontend/src/components/stores/StoreCard.jsx
+open-market/frontend/src/components/stores/StoreStats.jsx
+open-market/frontend/src/components/stores/StoreToolbar.jsx
+open-market/frontend/src/data/productDetails.js
+open-market/frontend/src/data/shopProducts.js
+open-market/frontend/src/data/storeDetails.js
+open-market/frontend/src/data/stores.js
 open-market/frontend/src/layouts/AuthLayout.jsx
 open-market/frontend/src/layouts/PublicLayout.jsx
-open-market/frontend/src/main.jsx
 open-market/frontend/src/pages/auth/AccountSuspendedPage.jsx
 open-market/frontend/src/pages/auth/EmailVerificationPage.jsx
 open-market/frontend/src/pages/auth/ForgotPasswordPage.jsx
@@ -177,12 +256,32 @@ open-market/frontend/src/pages/auth/RegisterBuyerPage.jsx
 open-market/frontend/src/pages/auth/RegisterPage.jsx
 open-market/frontend/src/pages/auth/RegisterSellerPage.jsx
 open-market/frontend/src/pages/auth/ResetPasswordPage.jsx
+open-market/frontend/src/pages/public/BecomeSellerPage.jsx
+open-market/frontend/src/pages/public/HelpCentrePage.html
+open-market/frontend/src/pages/public/HelpCentrePage.jsx
 open-market/frontend/src/pages/public/HomePage.jsx
+open-market/frontend/src/pages/public/HowItWorksPage.jsx
+open-market/frontend/src/pages/public/ProductDetailsPage.jsx
 open-market/frontend/src/pages/public/ShopPage.jsx
+open-market/frontend/src/pages/public/StoreDetailsPage.jsx
+open-market/frontend/src/pages/public/StoresPage.jsx
 open-market/frontend/src/routes/AppRoutes.jsx
+open-market/frontend/src/App.css
+open-market/frontend/src/App.jsx
+open-market/frontend/src/index.css
+open-market/frontend/src/main.jsx
+open-market/frontend/.gitignore
+open-market/frontend/eslint.config.js
+open-market/frontend/index.html
+open-market/frontend/package-lock.json
+open-market/frontend/package.json
+open-market/frontend/README.md
 open-market/frontend/vite.config.js
-open-market/frontend/vite-dev.err.log
-open-market/frontend/vite-dev.log
+open-market/.env.example
+open-market/.gitignore
+open-market/AGENTS.md
+open-market/DESIGN.md
+open-market/project-folder-structure.txt
 open-market/README.md
 
 Installed packages:
@@ -209,14 +308,6 @@ Frontend devDependencies:
 - eslint-plugin-react-refresh@0.5.2
 - globals@17.6.0
 - vite@8.0.14
-
-Frontend extraneous packages installed on disk but not declared in package.json:
-- @emnapi/core@1.10.0
-- @emnapi/runtime@1.10.0
-- @emnapi/wasi-threads@1.2.1
-- @napi-rs/wasm-runtime@1.1.4
-- @tybys/wasm-util@0.10.2
-- tslib@2.8.1
 
 Backend package: backend@1.0.0
 Location: D:\open-market\backend
