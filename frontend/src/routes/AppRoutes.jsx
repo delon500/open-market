@@ -16,6 +16,9 @@ import StoreDetailsPage from "../pages/public/StoreDetailsPage";
 import BecomeSellerPage from "../pages/public/BecomeSellerPage.jsx";
 import HowItWorksPage from "../pages/public/HowItWorksPage.jsx";
 import HelpCentrePage from "../pages/public/HelpCentrePage.jsx";
+import ContactPage from "../pages/public/ContactPage.jsx";
+import TrustSafetyPage from "../pages/public/TrustSafetyPage";
+import TermsPage from "../pages/public/TermsPage.jsx";
 
 function PlaceholderPage({ title }) {
     return (
@@ -51,6 +54,9 @@ export default function AppRoutes() {
             <Route path="/become-seller" element={<BecomeSellerPage />} />
             <Route path="/how-it-works" element={<HowItWorksPage />} />
             <Route path="/help-centre" element={<HelpCentrePage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/trust-safety" element={<TrustSafetyPage />} />
+            <Route path="/terms" element={<TermsPage />} />
             <Route path="/buyer-dashboard" element={<PlaceholderPage title="Buyer Dashboard" />} />
             <Route path="/seller-dashboard" element={<PlaceholderPage title="Seller Dashboard" />} />
 
