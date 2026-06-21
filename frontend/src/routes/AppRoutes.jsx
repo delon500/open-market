@@ -30,6 +30,8 @@ import AccountSuspendedPage from "../pages/auth/AccountSuspendedPage.jsx";
 import BuyerLayout from "../layouts/BuyerLayout.jsx";
 import BuyerDashboardPage from "../pages/buyer/BuyerDashboardPage.jsx";
 import BuyerProfilePage from "../pages/buyer/BuyerProfilePage.jsx";
+import AddressBookPage from "../pages/buyer/AddressBookPage.jsx";
+import WishlistPage from "../pages/buyer/WishlistPage.jsx";
 
 function PlaceholderPage({ title }) {
     return (
@@ -167,7 +169,7 @@ export default function AppRoutes() {
 
                 <Route
                     path="/account/addresses"
-                    element={<PlaceholderPage title="Address Book" />}
+                    element={<AddressBookPage />}
                 />
 
                 <Route
@@ -187,7 +189,7 @@ export default function AppRoutes() {
 
                 <Route
                     path="/wishlist"
-                    element={<PlaceholderPage title="Saved Items" />}
+                    element={<WishlistPage />}
                 />
 
                 <Route
