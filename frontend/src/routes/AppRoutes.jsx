@@ -32,6 +32,7 @@ import BuyerDashboardPage from "../pages/buyer/BuyerDashboardPage.jsx";
 import BuyerProfilePage from "../pages/buyer/BuyerProfilePage.jsx";
 import AddressBookPage from "../pages/buyer/AddressBookPage.jsx";
 import WishlistPage from "../pages/buyer/WishlistPage.jsx";
+import CartPage from "../pages/buyer/CartPage.jsx";
 
 function PlaceholderPage({ title }) {
     return (
@@ -193,17 +194,17 @@ export default function AppRoutes() {
                 />
 
                 <Route
+                    path="/cart"
+                    element={<CartPage />}
+                />
+
+                <Route
                     path="/disputes"
                     element={<PlaceholderPage title="My Disputes" />}
                 />
             </Route>
 
             {/* Pages not yet connected to a dedicated layout */}
-            <Route
-                path="/cart"
-                element={<PlaceholderPage title="Cart" />}
-            />
-
             <Route
                 path="/seller-dashboard"
                 element={<PlaceholderPage title="Seller Dashboard" />}

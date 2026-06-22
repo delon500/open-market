@@ -1,9 +1,10 @@
 import { Link, useLocation } from "react-router-dom";
 
+// Keep the compact mobile destinations aligned with the public marketplace navigation.
 const items = [
-    {label: "Home", to: "/home", icon: "home"},
+    {label: "Home", to: "/", icon: "home"},
     { label: "Shop", to: "/shop", icon: "storefront" },
-    { label: "Store", to: "/store", icon: "store" },
+    { label: "Stores", to: "/stores", icon: "store" },
     { label: "Cart", to: "/cart", icon: "shopping_bag" },
     { label: "Account", to: "/login", icon: "person" },
 ];

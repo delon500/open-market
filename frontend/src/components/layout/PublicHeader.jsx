@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+// Centralize public destinations so desktop navigation stays consistent across marketplace pages.
 const navLinks = [
     { label: "Shop", to: "/shop" },
     { label: "Stores", to: "/stores" },
@@ -9,7 +10,7 @@ const navLinks = [
     { label: "Help", to: "/help-centre" },
 ];
 
-export default function PublicHeader() {
+export default function PublicHeader({ cartCount = 0 }) {
     return (
         <header className="sticky top-0 z-40 border-b border-[#bfc9c3] bg-white">
             <div className="mx-auto flex max-w-[1280px] items-center justify-between gap-6 px-4 py-4 md:px-10">
@@ -47,7 +48,7 @@ export default function PublicHeader() {
                     <Link to="/cart" aria-label="Cart" className="relative text-[#003527]">
                         <span className="material-symbols-outlined icon-fill">shopping_bag</span>
                         <span className="absolute -right-2 -top-2 flex h-4 w-4 items-center justify-center rounded-full bg-[#fed65b] text-[10px] font-bold text-[#745c00]">
-              0
+              {cartCount}
             </span>
                     </Link>
 
