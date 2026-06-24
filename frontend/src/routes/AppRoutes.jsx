@@ -33,6 +33,16 @@ import BuyerProfilePage from "../pages/buyer/BuyerProfilePage.jsx";
 import AddressBookPage from "../pages/buyer/AddressBookPage.jsx";
 import WishlistPage from "../pages/buyer/WishlistPage.jsx";
 import CartPage from "../pages/buyer/CartPage.jsx";
+import CheckoutPage from "../pages/buyer/CheckoutPage.jsx";
+import PaymentProcessingPage from "../pages/buyer/PaymentProcessingPage.jsx";
+import PaymentSuccessPage from "../pages/buyer/PaymentSuccessPage.jsx";
+import PaymentFailedPage from "../pages/buyer/PaymentFailedPage.jsx";
+import MyOrdersPage from "../pages/buyer/MyOrdersPage.jsx";
+import OrderDetailsPage from "../pages/buyer/OrderDetailsPage.jsx";
+import OrderTrackingPage from "../pages/buyer/OrderTrackingPage.jsx";
+import DeliveryConfirmationPage from "../pages/buyer/DeliveryConfirmationPage.jsx";
+import DeliveryConfirmationSuccessPage from "../pages/buyer/DeliveryConfirmationSuccessPage.jsx";
+import ReviewSellerPage from "../pages/buyer/ReviewSellerPage.jsx";
 
 function PlaceholderPage({ title }) {
     return (
@@ -184,11 +194,6 @@ export default function AppRoutes() {
                 />
 
                 <Route
-                    path="/my-orders"
-                    element={<PlaceholderPage title="My Orders" />}
-                />
-
-                <Route
                     path="/wishlist"
                     element={<WishlistPage />}
                 />
@@ -197,6 +202,52 @@ export default function AppRoutes() {
                     path="/cart"
                     element={<CartPage />}
                 />
+
+                <Route
+                    path="/checkout"
+                    element={<CheckoutPage />} />
+
+                <Route
+                    path="/payment-processing"
+                    element={<PaymentProcessingPage />}
+                />
+
+                <Route
+                    path="/payment-success"
+                    element={<PaymentSuccessPage />}
+                />
+
+                <Route
+                    path="/payment-failed"
+                    element={<PaymentFailedPage />}
+                />
+
+                <Route
+                    path="/my-orders"
+                    element={<MyOrdersPage />}
+                />
+
+                <Route
+                    path="/order-details"
+                    element={<OrderDetailsPage />}
+                />
+
+                <Route
+                    path="/order-tracking"
+                    element={<OrderTrackingPage />}
+                />
+
+                <Route
+                    path="/delivery-confirmation"
+                    element={<DeliveryConfirmationPage />}
+                />
+
+                <Route
+                    path="/delivery-confirmation-success"
+                    element={<DeliveryConfirmationSuccessPage />}
+                />
+
+                <Route path="/review-seller" element={<ReviewSellerPage />} />
 
                 <Route
                     path="/disputes"
