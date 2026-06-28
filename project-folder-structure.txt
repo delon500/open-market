@@ -1,8 +1,8 @@
-﻿Open Market Project Folder Snapshot
-Generated: 2026-06-17 06:06:54 +02:00
+Open Market Project Folder Snapshot
+Generated: 2026/06/27, 23:05:44 Africa/Johannesburg
 Root: D:\open-market
 
-Excluded from this snapshot: .git, .idea, node_modules, dist, build, coverage, logs, and real .env files.
+Excluded from this snapshot: .git, .idea, .vscode, .turbo, .agents, .codex, node_modules, dist, build, coverage, logs, and real .env files.
 
 Folder tree with files:
 open-market/
@@ -42,8 +42,8 @@ open-market/
 |   |   |-- app.ts
 |   |   +-- server.ts
 |   |-- .gitignore
-|   |-- package.json
 |   |-- package-lock.json
+|   |-- package.json
 |   |-- prisma.config.ts
 |   +-- tsconfig.json
 |-- docs/
@@ -51,9 +51,14 @@ open-market/
 |   |   +-- api-routes.md
 |   |-- database/
 |   |   +-- open-market.dbml
-|   +-- product/
-|       |-- pages-checklist.md
-|       +-- user-flows.md
+|   |-- product/
+|   |   |-- pages-checklist.md
+|   |   +-- user-flows.md
+|   +-- superpowers/
+|       |-- plans/
+|       |   +-- 2026-06-20-address-book-standalone-html.md
+|       +-- specs/
+|           +-- 2026-06-20-address-book-standalone-html-design.md
 |-- frontend/
 |   |-- public/
 |   |-- src/
@@ -67,6 +72,11 @@ open-market/
 |   |   |   |   |-- PasswordInput.jsx
 |   |   |   |   |-- PasswordStrengthMeter.jsx
 |   |   |   |   +-- SocialButton.jsx
+|   |   |   |-- buyer/
+|   |   |   |   |-- BuyerHeader.jsx
+|   |   |   |   |-- BuyerMobileNav.jsx
+|   |   |   |   |-- BuyerPageHeader.jsx
+|   |   |   |   +-- BuyerSidebar.jsx
 |   |   |   |-- common/
 |   |   |   |   +-- FormInput.jsx
 |   |   |   |-- layout/
@@ -95,6 +105,8 @@ open-market/
 |   |   |   |   |-- FilterControls.jsx
 |   |   |   |   |-- FilterDrawer.jsx
 |   |   |   |   |-- ProductCard.jsx
+|   |   |   |   |-- productCardModel.js
+|   |   |   |   |-- productCardModel.test.js
 |   |   |   |   +-- ShopToolbar.jsx
 |   |   |   |-- store/
 |   |   |   |-- store-details/
@@ -128,6 +140,7 @@ open-market/
 |   |   |-- hooks/
 |   |   |-- layouts/
 |   |   |   |-- AuthLayout.jsx
+|   |   |   |-- BuyerLayout.jsx
 |   |   |   +-- PublicLayout.jsx
 |   |   |-- pages/
 |   |   |   |-- auth/
@@ -141,6 +154,31 @@ open-market/
 |   |   |   |   |-- RegisterSellerPage.jsx
 |   |   |   |   +-- ResetPasswordPage.jsx
 |   |   |   |-- buyer/
+|   |   |   |   |-- AddressBookPage.jsx
+|   |   |   |   |-- BuyerDashboardPage.jsx
+|   |   |   |   |-- BuyerNotificationsPage.jsx
+|   |   |   |   |-- BuyerProfilePage.jsx
+|   |   |   |   |-- BuyerSettingsPage.jsx
+|   |   |   |   |-- cartModel.js
+|   |   |   |   |-- CartPage.jsx
+|   |   |   |   |-- CartPage.routing.test.js
+|   |   |   |   |-- CheckoutPage.jsx
+|   |   |   |   |-- DeliveryConfirmationPage.jsx
+|   |   |   |   |-- DeliveryConfirmationSuccessPage.jsx
+|   |   |   |   |-- DisputeDetailsPage.jsx
+|   |   |   |   |-- DisputesPage.jsx
+|   |   |   |   |-- MyOrdersPage.jsx
+|   |   |   |   |-- OpenDisputePage.jsx
+|   |   |   |   |-- OrderDetailsPage.jsx
+|   |   |   |   |-- OrderTrackingPage.jsx
+|   |   |   |   |-- PaymentFailedPage.jsx
+|   |   |   |   |-- PaymentProcessingPage.jsx
+|   |   |   |   |-- PaymentSuccessPage.jsx
+|   |   |   |   |-- RefundStatusPage.jsx
+|   |   |   |   |-- ReturnsPage.jsx
+|   |   |   |   |-- ReviewProductPage.jsx
+|   |   |   |   |-- ReviewSellerPage.jsx
+|   |   |   |   +-- WishlistPage.jsx
 |   |   |   |-- public/
 |   |   |   |   |-- BecomeSellerPage.jsx
 |   |   |   |   |-- ContactPage.jsx
@@ -171,174 +209,86 @@ open-market/
 |   |-- .gitignore
 |   |-- eslint.config.js
 |   |-- index.html
-|   |-- package.json
 |   |-- package-lock.json
+|   |-- package.json
 |   |-- README.md
 |   +-- vite.config.js
 |-- .env.example
 |-- .gitignore
 |-- AGENTS.md
+|-- design-qa.md
 |-- DESIGN.md
 |-- project-folder-structure.txt
 +-- README.md
 
-All files:
-- .env.example
-- .gitignore
-- AGENTS.md
-- backend/.gitignore
-- backend/package.json
-- backend/package-lock.json
-- backend/prisma.config.ts
-- backend/prisma/schema.prisma
-- backend/src/app.ts
-- backend/src/common/errors/ApiError.ts
-- backend/src/common/errors/errorHandler.ts
-- backend/src/config/env.ts
-- backend/src/routes/index.ts
-- backend/src/server.ts
-- backend/tsconfig.json
-- DESIGN.md
-- docs/api/api-routes.md
-- docs/database/open-market.dbml
-- docs/product/pages-checklist.md
-- docs/product/user-flows.md
-- frontend/.gitignore
-- frontend/eslint.config.js
-- frontend/index.html
-- frontend/package.json
-- frontend/package-lock.json
-- frontend/README.md
-- frontend/src/App.css
-- frontend/src/App.jsx
-- frontend/src/assets/icons/google.svg
-- frontend/src/components/auth/ConsentCheckbox.jsx
-- frontend/src/components/auth/PasswordField.jsx
-- frontend/src/components/auth/PasswordInput.jsx
-- frontend/src/components/auth/PasswordStrengthMeter.jsx
-- frontend/src/components/auth/SocialButton.jsx
-- frontend/src/components/common/FormInput.jsx
-- frontend/src/components/layout/AnnouncementBar.jsx
-- frontend/src/components/layout/MinimalAuthHeader.jsx
-- frontend/src/components/layout/MobileBottomNav.jsx
-- frontend/src/components/layout/PublicFooter.jsx
-- frontend/src/components/layout/PublicHeader.jsx
-- frontend/src/components/product/BuyerProtectionCard.jsx
-- frontend/src/components/product/DeliveryInfo.jsx
-- frontend/src/components/product/MobileAddToCart.jsx
-- frontend/src/components/product/ProductBreadcrumb.jsx
-- frontend/src/components/product/ProductGallery.jsx
-- frontend/src/components/product/ProductLightbox.jsx
-- frontend/src/components/product/ProductReviews.jsx
-- frontend/src/components/product/ProductTabs.jsx
-- frontend/src/components/product/PurchasePanel.jsx
-- frontend/src/components/product/RelatedProducts.jsx
-- frontend/src/components/product/SellerCard.jsx
-- frontend/src/components/product/StarRating.jsx
-- frontend/src/components/shop/EmptyState.jsx
-- frontend/src/components/shop/FilterControls.jsx
-- frontend/src/components/shop/FilterDrawer.jsx
-- frontend/src/components/shop/ProductCard.jsx
-- frontend/src/components/shop/ShopToolbar.jsx
-- frontend/src/components/store-details/BuyerProtectionPanel.jsx
-- frontend/src/components/store-details/MobileStoreActions.jsx
-- frontend/src/components/store-details/MobileStoreStrip.jsx
-- frontend/src/components/store-details/SaveStoreButton.jsx
-- frontend/src/components/store-details/StoreBreadcrumb.jsx
-- frontend/src/components/store-details/StoreDetailsStyles.jsx
-- frontend/src/components/store-details/StoreEmptyState.jsx
-- frontend/src/components/store-details/StoreFilterChips.jsx
-- frontend/src/components/store-details/StoreHero.jsx
-- frontend/src/components/store-details/StoreInfoCard.jsx
-- frontend/src/components/store-details/StoreProductCard.jsx
-- frontend/src/components/store-details/StoreProductToolbar.jsx
-- frontend/src/components/store-details/StoreRating.jsx
-- frontend/src/components/store-details/StoreReviewsPanel.jsx
-- frontend/src/components/store-details/StoreSectionTabs.jsx
-- frontend/src/components/store-details/StoreToast.jsx
-- frontend/src/components/stores/EmptyStoresState.jsx
-- frontend/src/components/stores/StoreCard.jsx
-- frontend/src/components/stores/StoreStats.jsx
-- frontend/src/components/stores/StoreToolbar.jsx
-- frontend/src/data/productDetails.js
-- frontend/src/data/shopProducts.js
-- frontend/src/data/storeDetails.js
-- frontend/src/data/stores.js
-- frontend/src/index.css
-- frontend/src/layouts/AuthLayout.jsx
-- frontend/src/layouts/PublicLayout.jsx
-- frontend/src/main.jsx
-- frontend/src/pages/auth/AccountSuspendedPage.jsx
-- frontend/src/pages/auth/EmailVerificationPage.jsx
-- frontend/src/pages/auth/ForgotPasswordPage.jsx
-- frontend/src/pages/auth/LoginPage.jsx
-- frontend/src/pages/auth/PhoneVerificationPage.jsx
-- frontend/src/pages/auth/RegisterBuyerPage.jsx
-- frontend/src/pages/auth/RegisterPage.jsx
-- frontend/src/pages/auth/RegisterSellerPage.jsx
-- frontend/src/pages/auth/ResetPasswordPage.jsx
-- frontend/src/pages/public/BecomeSellerPage.jsx
-- frontend/src/pages/public/ContactPage.jsx
-- frontend/src/pages/public/DisputeResolutionPage.jsx
-- frontend/src/pages/public/HelpCentrePage.jsx
-- frontend/src/pages/public/HomePage.jsx
-- frontend/src/pages/public/HowItWorksPage.jsx
-- frontend/src/pages/public/PrivacyPage.jsx
-- frontend/src/pages/public/ProductDetailsPage.jsx
-- frontend/src/pages/public/SellerPolicyPage.jsx
-- frontend/src/pages/public/SellerSupportPage.jsx
-- frontend/src/pages/public/ShippingPage.jsx
-- frontend/src/pages/public/ShopPage.jsx
-- frontend/src/pages/public/StoreDetailsPage.jsx
-- frontend/src/pages/public/StoresPage.jsx
-- frontend/src/pages/public/TermsPage.jsx
-- frontend/src/pages/public/TrustSafetyPage.jsx
-- frontend/src/routes/AppRoutes.jsx
-- frontend/vite.config.js
-- project-folder-structure.txt
-- README.md
+Package Summary
+===============
 
-Frontend packages:
-- @tailwindcss/vite: ^4.3.0
-- axios: ^1.16.1
-- lucide-react: ^1.16.0
-- react: ^19.2.6
-- react-dom: ^19.2.6
-- react-router-dom: ^7.15.1
-- tailwindcss: ^4.3.0
+Frontend package
+----------------
+Name: frontend
+Version: 0.0.0
 
-Frontend dev packages:
-- @eslint/js: ^10.0.1
-- @types/react: ^19.2.14
-- @types/react-dom: ^19.2.3
-- @vitejs/plugin-react: ^6.0.1
-- eslint: ^10.3.0
-- eslint-plugin-react-hooks: ^7.1.1
-- eslint-plugin-react-refresh: ^0.5.2
-- globals: ^17.6.0
-- vite: ^8.0.12
+Scripts:
+  - build: vite build
+  - dev: vite
+  - lint: eslint .
+  - preview: vite preview
 
-Backend packages:
-- @prisma/client: ^7.8.0
-- bcryptjs: ^3.0.3
-- cookie-parser: ^1.4.7
-- cors: ^2.8.6
-- dotenv: ^17.4.2
-- express: ^5.2.1
-- helmet: ^8.2.0
-- jsonwebtoken: ^9.0.3
-- morgan: ^1.10.1
-- zod: ^4.4.3
+Dependencies:
+  - @tailwindcss/vite: ^4.3.0
+  - axios: ^1.16.1
+  - lucide-react: ^1.16.0
+  - react: ^19.2.6
+  - react-dom: ^19.2.6
+  - react-router-dom: ^7.15.1
+  - tailwindcss: ^4.3.0
 
-Backend dev packages:
-- @types/bcryptjs: ^2.4.6
-- @types/cookie-parser: ^1.4.10
-- @types/cors: ^2.8.19
-- @types/express: ^5.0.6
-- @types/jsonwebtoken: ^9.0.10
-- @types/morgan: ^1.9.10
-- @types/node: ^25.9.1
-- nodemon: ^3.1.14
-- prisma: ^7.8.0
-- tsx: ^4.22.3
-- typescript: ^6.0.3
+Dev Dependencies:
+  - @eslint/js: ^10.0.1
+  - @types/react: ^19.2.14
+  - @types/react-dom: ^19.2.3
+  - @vitejs/plugin-react: ^6.0.1
+  - eslint: ^10.3.0
+  - eslint-plugin-react-hooks: ^7.1.1
+  - eslint-plugin-react-refresh: ^0.5.2
+  - globals: ^17.6.0
+  - vite: ^8.0.12
+
+Backend package
+---------------
+Name: backend
+Version: 1.0.0
+
+Scripts:
+  - build: tsc
+  - dev: tsx watch src/server.ts
+  - prisma:generate: prisma generate
+  - prisma:migrate: prisma migrate dev
+  - prisma:studio: prisma studio
+  - start: node dist/server.js
+
+Dependencies:
+  - @prisma/client: ^7.8.0
+  - bcryptjs: ^3.0.3
+  - cookie-parser: ^1.4.7
+  - cors: ^2.8.6
+  - dotenv: ^17.4.2
+  - express: ^5.2.1
+  - helmet: ^8.2.0
+  - jsonwebtoken: ^9.0.3
+  - morgan: ^1.10.1
+  - zod: ^4.4.3
+
+Dev Dependencies:
+  - @types/bcryptjs: ^2.4.6
+  - @types/cookie-parser: ^1.4.10
+  - @types/cors: ^2.8.19
+  - @types/express: ^5.0.6
+  - @types/jsonwebtoken: ^9.0.10
+  - @types/morgan: ^1.9.10
+  - @types/node: ^25.9.1
+  - nodemon: ^3.1.14
+  - prisma: ^7.8.0
+  - tsx: ^4.22.3
+  - typescript: ^6.0.3

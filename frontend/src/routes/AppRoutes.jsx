@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 
 import HomePage from "../pages/public/HomePage";
 import ShopPage from "../pages/public/ShopPage.jsx";
@@ -43,6 +43,14 @@ import OrderTrackingPage from "../pages/buyer/OrderTrackingPage.jsx";
 import DeliveryConfirmationPage from "../pages/buyer/DeliveryConfirmationPage.jsx";
 import DeliveryConfirmationSuccessPage from "../pages/buyer/DeliveryConfirmationSuccessPage.jsx";
 import ReviewSellerPage from "../pages/buyer/ReviewSellerPage.jsx";
+import ReviewProductPage from "../pages/buyer/ReviewProductPage.jsx";
+import OpenDisputePage from "../pages/buyer/OpenDisputePage.jsx";
+import DisputesPage from "../pages/buyer/DisputesPage.jsx";
+import DisputeDetailsPage from "../pages/buyer/DisputeDetailsPage.jsx";
+import RefundStatusPage from "../pages/buyer/RefundStatusPage.jsx";
+import ReturnsPage from "../pages/buyer/ReturnsPage.jsx";
+import BuyerNotificationsPage from "../pages/buyer/BuyerNotificationsPage.jsx";
+import BuyerSettingsPage from "../pages/buyer/BuyerSettingsPage.jsx";
 
 function PlaceholderPage({ title }) {
     return (
@@ -185,13 +193,10 @@ export default function AppRoutes() {
 
                 <Route
                     path="/account/notifications"
-                    element={<PlaceholderPage title="Notifications" />}
+                    element={<BuyerNotificationsPage />}
                 />
 
-                <Route
-                    path="/account/settings"
-                    element={<PlaceholderPage title="Buyer Settings" />}
-                />
+                <Route path="/account/settings" element={<BuyerSettingsPage />} />
 
                 <Route
                     path="/wishlist"
@@ -249,10 +254,22 @@ export default function AppRoutes() {
 
                 <Route path="/review-seller" element={<ReviewSellerPage />} />
 
-                <Route
-                    path="/disputes"
-                    element={<PlaceholderPage title="My Disputes" />}
-                />
+                <Route path="/review-product" element={<ReviewProductPage />} />
+
+                <Route path="/open-dispute" element={<OpenDisputePage />} />
+
+                <Route path="/disputes" element={<DisputesPage />} />
+
+                <Route path="/dispute-details" element={<DisputeDetailsPage />} />
+
+                <Route path="/refund-status" element={<RefundStatusPage />} />
+
+                <Route path="/returns" element={<ReturnsPage />} />
+
+                <Route path="/buyer-notifications" element={<Navigate to="/account/notifications" replace />} />
+
+                <Route path="/buyer-settings" element={<Navigate to="/account/settings" replace />} />
+
             </Route>
 
             {/* Pages not yet connected to a dedicated layout */}
